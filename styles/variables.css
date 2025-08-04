@@ -2,3 +2,22 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  --bg-img: url(../images/cover-image-dark.png);
+  --main-text-color: #F1B2CE;
+  --bg-color: #000028;
+  --accent-color: #FF0070;
+  --text-on-accent-color: #000028;
+  --h1-color: #DB00FF;
+  --h1-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --h2-size: 18px;
+  --h2-weight: 700;
+  --h3-size: 18px;
+  --h3-weight: 700;
+  --h4-size: 18px;
+  --h4-weight: 400;
+  --padding: 10px;
+  --outline-color: #FF007066;
+  --h-color: #FF0070;
+  --decoration-display: block;
+}

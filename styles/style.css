@@ -1,5 +1,268 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  height: 100vh;
+  color: var(--main-text-color);
+  background-color: var(--bg-color);
+  background-image: var(--bg-img);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  align-items: center;
+  height: 100vh;
+  min-height: 668px;
+  padding: var(--padding);
+}
+
+.header-decoration-element {
+  position: absolute;
+  top: var(--padding);
+  right: calc(var(--padding) + 9px);
+  display: var(--decoration-display);
+  color: var(--accent-color);
+}
+
+.header-decoration-element::after {
+  content: '';
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-inline-start: 10px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  background-color: var(--accent-color);
+}
+
+.header__theme-menu {
+  justify-self: end;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  gap: 10px;
+}
+
+.header__theme-menu-item {
+  width: 70px;
+  height: 26px;
+}
+
+.header__theme-menu-button {
+  border: none;
+  padding: 1.5px 13px;
+  color: var(--h-color);
+  background-color: transparent;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--h-color);
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--outline-color);
+}
+
+.header__title,
+.footer__title {
+  color: var(--h1-color);
+  font-size: var(--h1-font-size);
+  line-height: 83%;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__subtitle {
+  font-weight: var(--h2-weight);
+  font-size: var(--h2-size);
+}
+
+.title-decor {
+  color: var(--text-on-accent-color);
+  background-color: var(--accent-color);
+}
+
+.content {
+  padding: 40px var(--padding);
+}
+
+.section {
+  display: grid;
+  gap: 20px;
+}
+
+.section__title {
+  color: var(--h-color);
+  font-weight: var(--h2-weight);
+  font-size: var(--h2-size);
+}
+
+.content__title {
+  margin-bottom: 10px;
+  font-weight: var(--h3-weight);
+  font-size: var(--h3-size);
+}
+
+.content__title:has(+.content-list) {
+  margin-bottom: 20px;
+}
+
+.content__subtitle {
+  margin-bottom: 10px;
+  font-weight: var(--h4-weight);
+  font-size: var(--h4-size);
+}
+
+.content-list-item {
+  margin-bottom: 20px;
+}
+
+.content-list-item:last-child {
+  margin-bottom: 50px;
+}
+
+.link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.link:hover {
+  border-bottom: 1px solid var(--main-text-color);
+
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link:focus-visible {
+  outline: 1px solid var(--main-text-color);
+}
+
+.gallery {
+  display: grid;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.gallery__item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 668px;
+  padding: var(--padding);
+}
+
+.footer__title {
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+@media (width >=768px) {
+
+  :root {
+    --padding: 20px;
+  }
+
+  .header {
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+  .header__theme-menu {
+    grid-column: span 2;
+  }
+
+  .header__title {
+    grid-column: span 2;
+    margin-inline-start: -20px;
+  }
+
+  .header__subtitle {
+    grid-column: 2;
+  }
+
+  .content {
+    padding: 60px var(--padding);
+  }
+
+  .content-list-item:last-child {
+    margin-bottom: 80px;
+  }
+
+  .section {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .what .content-list {
+    grid-column: span 2;
+  }
+
+  .pictures .content__title {
+    margin-bottom: 20px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, min-content);
+    gap: 20px;
+  }
+
+  .gallery__item:nth-child(1) {
+    grid-column: span 2;
+  }
+
+  .gallery__item:nth-child(2) {
+    grid-row: span 2;
+  }
+
+  .gallery__item:nth-child(3) {
+    grid-row: span 2;
+  }
+
+  .gallery__item:nth-child(5) {
+    grid-column: span 2;
+  }
+}
+
+@media (width >=1024px) {
+  .header__theme-menu {
+    justify-self: center;
+    align-self: start;
+  }
+
+  .header__theme-menu-list {
+    grid-template-columns: repeat(3, min-content);
+  }
+
+  .what {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .what .content-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: span 3;
+    gap: 20px;
+  }
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--h-color);
+  pointer-events: none;
 }
