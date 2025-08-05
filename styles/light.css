@@ -14,9 +14,9 @@
   --bg-color: #FFF1F7;
   --accent-color: #FF8DCB;
   --text-on-accent-color: #353430;
-  --h1-color: #FFC2E6;
-  --outline-color: #32312D66;
-  --h-color: #353430;
+  --header-title-color: #FFC2E6;
+  --transparent-outline-color: #32312D66;
+  --variable-accent-color: #353430;
   --decoration-display: none;
 }
 
@@ -27,9 +27,9 @@
     --bg-color: #FFF1F7;
     --accent-color: #FF8DCB;
     --text-on-accent-color: #353430;
-    --h1-color: #FFC2E6;
-    --outline-color: #32312D66;
-    --h-color: #353430;
+    --header-title-color: #FFC2E6;
+    --transparent-outline-color: #32312D66;
+    --variable-accent-color: #353430;
     --decoration-display: none;
   }
 }

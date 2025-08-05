@@ -44,32 +44,3 @@ a {
   font-size: inherit;
   line-height: inherit;
 }
-
-.decorated-zone {
-  position: relative;
-}
-
-.decorated-zone::before,
-.decorated-zone::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  border-width: 0;
-  border-style: solid;
-  border-color: var(--accent-color);
-}
-
-.decorated-zone::before {
-  top: var(--padding);
-  right: var(--padding);
-  border-top-width: 1px;
-  border-right-width: 1px;
-}
-
-.decorated-zone::after {
-  bottom: var(--padding);
-  left: var(--padding);
-  border-bottom-width: 1px;
-  border-left-width: 1px;
-}

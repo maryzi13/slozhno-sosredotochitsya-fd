@@ -14,8 +14,8 @@
   --bg-color: #000028;
   --accent-color: #FF0070;
   --text-on-accent-color: #000028;
-  --h1-color: #DB00FF;
-  --outline-color: #FF007066;
-  --h-color: #FF0070;
+  --header-title-color: #DB00FF;
+  --transparent-outline-color: #FF007066;
+  --variable-accent-color: #FF0070;
   --decoration-display: block;
 }
