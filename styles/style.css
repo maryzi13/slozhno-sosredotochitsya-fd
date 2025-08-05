@@ -297,11 +297,8 @@
   }
 
   .what .content-list {
-    grid-column: span 3;
-  }
-
-  .what .content-list {
     grid-template-columns: repeat(3, 1fr);
+    grid-column: span 3;
   }
 
   .how .container {
